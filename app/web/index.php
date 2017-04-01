@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+print_r($_SESSION);
+
+$login = $_GET['login'];
+
 require '../config.php';
 require '../header_css.php';
 
@@ -42,13 +48,32 @@ require '../header_css.php';
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mi cuenta <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Iniciar sesión</a></li>
+                        <?php
+
+                            if(!empty($_SESSION['login_name'])): ?>
+                                <li><a href="#">Bienvenido <?= $_SESSION['login_name']?></a></li>
+                            <?php
+
+                        ?>
+                        <?php else: ?>
+                            <li><a href="#">Iniciar sesión</a></li>
+                        <?php endif; ?>
                     </ul>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+<?php
+
+if($login == -1):
+
+echo "Error en el login";
+
+endif;
+
+?>
 
 <?php
 

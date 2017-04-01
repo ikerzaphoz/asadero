@@ -9,6 +9,7 @@ Class Conf{
    private $_db;
 
    public function __construct(){
+      require '../conn/config.php';
       $this->_domain=$domain;
       $this->_userdb=$user;
       $this->_passdb=$password;

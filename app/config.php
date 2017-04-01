@@ -2,10 +2,9 @@
 
 ini_set("display_errors", 1);
 
-
 //Declaramos constantes
-define("root", $_SERVER['DOCUMENT_ROOT']."/projects/asadero/");
-define("path_web", "/projects/asadero/");
+define("root", $_SERVER['DOCUMENT_ROOT']."/projects/asaderoalpunto/");
+define("path_web", "/projects/asaderoalpunto/");
 
 /*Incluimos el fichero de la clase Db*/
 require root.'app/class/db.php';
