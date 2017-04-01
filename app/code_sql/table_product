@@ -1,0 +1,11 @@
+//Create table product
+
+CREATE TABLE IF NOT EXISTS `product` (
+  `nombre` varchar(250) NOT NULL,
+  `precio` int(9) NOT NULL,
+  PRIMARY KEY (`nombre`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+//Insert table product
+
+INSERT INTO product (nombre, precio) VALUES ('Taza','20')

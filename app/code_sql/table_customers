@@ -1,0 +1,16 @@
+//Create table customers
+
+CREATE TABLE IF NOT EXISTS `customers` (
+  `email` varchar(250) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `surname` varchar(100) NOT NULL,
+  `phone` int(9) NOT NULL,
+  `age` int(3) NOT NULL,
+  `pass` varchar (50) NOT NULL,
+  PRIMARY KEY (`email`),
+  UNIQUE KEY `phone` (`phone`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+//Insert table customers
+
+INSERT INTO customers (email, name, surname, phone, age, pass) VALUES ('Prueba@prueba.com','Nombre','Apellidos', '123456789','18','123456789')
